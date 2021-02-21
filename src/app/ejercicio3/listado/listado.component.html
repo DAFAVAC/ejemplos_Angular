@@ -1,0 +1,51 @@
+<p>------------------------------ejemplos de clases !-----------------------------------</p>
+<!--
+<ul>
+    <li>
+        item1
+    </li>
+    <li>
+        {{listado[0]}}
+    </li>
+    <li>
+        {{listado[1]}}
+    </li>
+    <li>
+        {{listado[2]}}
+    </li>
+    <li>
+        {{listado[3]}}
+    </li>
+
+</ul>-->
+<div *ngIf="listaElementoBorrado ; else noBorrado">
+<h2>Elemento borrado fue : </h2>
+<small>
+    {{listaElementoBorrado}}
+</small>
+
+</div>
+
+
+
+<ng-template #noBorrado>
+    <h2>no se ha borrado nada</h2>
+    <h1></h1>
+</ng-template>
+
+
+
+
+
+<button (click)="borrarElemento()">sgfdgdg</button>
+
+<ul>
+    <li>
+        item1
+    </li>
+    <li *ngFor="let lista of listado ; let i = index">
+        {{i+1}}.-{{lista}}
+    </li>
+
+
+</ul>
